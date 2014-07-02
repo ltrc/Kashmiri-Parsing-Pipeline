@@ -30,6 +30,6 @@ elif [[ -f $INPUT ]]; then
 	python ssf2conll.py "$OUTPUT/output.vib" > "$OUTPUT/output.conll"
 	java "-jar" "maltparser-1.7.2.jar" "-c" "intraChunkParser.mco" "-i" "$OUTPUT/output.conll" "-o" "$OUTPUT/output.parse" "-m" "parse"
 else
-	echo "Please specify the required valid argument i.e., <File> or <Directory>"
+	echo "Please specify the required valid arguments i.e., <File|Directory> <Directory>"
 	exit 1
 fi
