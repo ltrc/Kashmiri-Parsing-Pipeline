@@ -3,8 +3,8 @@
 
 INPUT=$1 # Could be file or a folder
 OUTPUT=$2
-headPath="/home/riyaz/Tools/headcomputation-1.8"
-vibPath="/home/riyaz/Tools/vibhakticomputation-2.3.2"
+headPath="$kashPar/dependencies/headcomputation-1.8"
+vibPath="$kashPar/dependencies/vibhakticomputation-2.3.2"
 
 count=0
 if [[ -d $INPUT ]]; then
