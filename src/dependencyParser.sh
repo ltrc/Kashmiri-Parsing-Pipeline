@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 
-
 INPUT=$1 # Could be file or a folder
 OUTPUT=$2
 headPath="$kashPar/dependencies/headcomputation-1.8"

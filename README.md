@@ -3,12 +3,7 @@ Kashmiri-Parsing-Pipeline
 
 A toolkit for Kashmiri which includes a portion of Kashmiri Dependency treebank and a dependency parsing pipeline with a POS-tagger, a Chunker and an Intra-chunk Dependency Parser.
 
-
-vim ~/.bashrc
-
-export kashPar=/path/to/KashmiriParsingFolder
-
-source ~/.bashrc
+Set the environment variable kashPar to Kashmiri Parsing folder in ~/.bashrc as export kashPar="PATH OF Kashmiri Parsing Folder"
 
 USAGE:: bash dependencyParser.sh (FILE) | (FOLDER FOLDER)
 
