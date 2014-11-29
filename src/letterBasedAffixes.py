@@ -3,52 +3,59 @@
 __Author__ = "Riyaz Ahmad Bhat"
 __Version__ = "1.0"
 
+#ApaNe	More	Apa	Ap	A	e	Apa	Ap	A		PRP
+#ridZhana	More	ridZ	rid	ri	a	ridZ	rid	ri	r	NN
+
 def prefix(token):
-	global features
+
 	if len(token)>=4:
-		features += "\t"+"".join(token[-4:])
+		yield token[-4:]
 	else:
-		features += "\tLL"
+		yield "LL"
 
 	if len(token)>=3:
-		features += "\t"+"".join(token[-3:])
+		yield token[-3:]
 	else:
-		features += "\tLL"
+		yield "LL"
 
 	if len(token)>=2:
-		features += "\t"+"".join(token[-2:])
+		yield token[-2:]
 	else:
-		features += "\tLL"
-
-	features += "\t"+token[-1]
+		yield "LL"
+	try:
+		yield token[-1]
+	except:
+		yield "_"
 
 def suffix(token):
-	global features
-	if len(token)>=4:
-		features += "\t"+"".join(token[:5])
-	else:
-		features += "\tLL"
 
-	if len(token)>=3:
-		features += "\t"+"".join(token[:4])
+	if len(token)>=4:
+		yield token[:4]
 	else:
-		features += "\tLL"
+		yield "LL"
+	
+	if len(token)>=3:
+		yield token[:3]
+	else:
+		yield "LL"
 
 	if len(token)>=2:
-		features += "\t"+"".join(token[:3])
+		yield token[:2]
 	else:
-		features += "\tLL"
+		yield "LL"
 
-	features += "\t"+token[0]
+	try:
+		yield token[0]
+	except:
+		yield "_"
+
+def length(word):
+	if len(word) >= 4:
+		yield "More"
+	else:
+		yield "Less"
 
 def affixes (word):
-	global features
-	features = word
-	if len(word) >= 4:
-		features += "\tMore"
-	else:
-		features += "\tLess"	
-	prefix(word)
-	suffix(word)
-
+	word = word.decode("utf-8",)
+	features = "\t".join((word, "\t".join(length(word)), "\t".join(prefix(word)), "\t".join(suffix(word))))
 	return features.encode("utf-8")
