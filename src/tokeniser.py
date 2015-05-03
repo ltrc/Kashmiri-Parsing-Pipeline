@@ -1,5 +1,12 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 
+import re
+import os
+import sys
+import string
+import argparse
+import letterBasedAffixes as tkn
+
 def tokenise (inFile, outFile):
 	for segment in inFile:
 		if segment == "\n":
@@ -39,12 +46,4 @@ def main():
 	
 
 if __name__ == "__main__":
-	
-	import re
-	import os
-	import sys
-	import string
-	import argparse
-	import letterBasedAffixes as tkn
-
 	main()

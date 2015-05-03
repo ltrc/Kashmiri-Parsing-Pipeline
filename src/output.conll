@@ -1,0 +1,9 @@
+1	NN	n	_	_	chunkId-NP|stype-|voicetype-	8	r6	_	_
+2	NN	n	_	_	chunkId-NP2|stype-|voicetype-	8	r6	_	_
+3	NN	n	_	_	chunkId-NP3|stype-|voicetype-	8	r6	_	_
+4	NN	unk	_	_	chunkId-NP4|stype-|voicetype-	8	r6	_	_
+5	NN	n	_	_	chunkId-NP5|stype-|voicetype-	6	pof	_	_
+6	VM	v	_	_	chunkId-VGNF|stype-|voicetype-	8	nmod__k1inv	_	_
+7	NN	n	_	_	chunkId-NP6|stype-|voicetype-	8	r6	_	_
+8	NN	unk	_	_	chunkId-NP7|stype-|voicetype-	0	main	_	_
+9	VM	v	_	_	chunkId-VGF|stype-|voicetype-	0	nmod__k1inv	_	_

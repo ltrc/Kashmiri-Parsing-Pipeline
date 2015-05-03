@@ -3,6 +3,9 @@
 __Author__ = "Riyaz Ahmad Bhat"
 __Version__ = "1.0"
 
+import re
+import sys
+
 def convertToSsf(bioSentence):
 	typeCount = list()
 	nonTerminalId = terminalId = int()
@@ -30,8 +33,6 @@ def convertToSsf(bioSentence):
 	yield "\t))"
 
 if __name__ == "__main__":
-	import re
-	import sys
 
 	try:
 		assert sys.argv[1]

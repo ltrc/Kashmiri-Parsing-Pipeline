@@ -1,5 +1,8 @@
 #!/usr/bin/env python -*- coding: utf-8 -*-
 
+import re
+import sys
+
 def ssf2conll (sentence):
 	"""1	koshur	_	JJP	JJ	_	2	nmod	_	_"""
 	idx = int()
@@ -21,9 +24,6 @@ def ssf2conll (sentence):
 			
 
 if __name__ == "__main__":
-	
-	import re
-	import sys
 	
 	try:
 		assert sys.argv[1]
