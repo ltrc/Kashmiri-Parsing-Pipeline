@@ -6,7 +6,7 @@ __Version__ = "1.0"
 #ApaNe	More	Apa	Ap	A	e	Apa	Ap	A		PRP
 #ridZhana	More	ridZ	rid	ri	a	ridZ	rid	ri	r	NN
 
-def prefix(token):
+def suffix(token):
 
 	if len(token)>=4:
 		yield token[-4:]
@@ -27,7 +27,7 @@ def prefix(token):
 	except:
 		yield "_"
 
-def suffix(token):
+def prefix(token):
 
 	if len(token)>=4:
 		yield token[:4]
